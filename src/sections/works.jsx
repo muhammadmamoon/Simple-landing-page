@@ -26,7 +26,7 @@ const services = [
 
 function Works() {
   return (
-    <div className="flex flex-col justify-center items-center py-10">
+    <div id="work" className="flex flex-col justify-center items-center py-10">
       <div className=" text-center py-6 px-4 rounded-lg  w-[90%] max-w-2xl">
         <h2 className="text-3xl font-bold text-black">How does it work?</h2>
         <p className="text-gray-400 mt-2">

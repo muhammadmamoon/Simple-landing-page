@@ -2,7 +2,7 @@ import React from "react";
 
 export const Offer = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between bg-[#FFFFFF] py-10 px-5 md:px-20 w-full h-full">
+    <div id="our-blog" className="flex flex-col md:flex-row items-center justify-between bg-[#FFFFFF] py-10 px-5 md:px-20 w-full h-full">
       <div className="md:w-1/2 flex flex-col justify-center items-start space-y-5">
         <h2 className="font-bold text-3xl md:text-4xl text-gray-800">
           We Offer a Full Range <br /> of Digital Marketing Services!

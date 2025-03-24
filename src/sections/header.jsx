@@ -5,30 +5,43 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("Home");
 
+  const navLinks = {
+    Home: "home",
+    About: "work",
+    Blog: "our-blog",
+    Testimonial: "client-feedback",
+  };
+
   const handleNavClick = (section) => {
     setActive(section);
-    setMenuOpen(false); 
+    setMenuOpen(false);
+
+   
+    document.getElementById(navLinks[section])?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   };
 
   return (
-    <div className="bg-[#F7F8FA] w-full h-16 px-5 flex justify-between items-center sticky top-0 z-50 shadow-md">
+    <div id="home" className="bg-[#F7F8FA] w-full h-16 px-5 flex justify-between items-center sticky top-0 z-50 shadow-md">
       <div>
         <img src="/Group2.svg" alt="Logo" className="w-28" />
       </div>
 
+
       <div className="hidden md:flex">
         <ul className="flex space-x-6">
-          {["Home", "About", "Blog", "Testimonial"].map((item) => (
+          {Object.keys(navLinks).map((item) => (
             <li key={item}>
-              <a
-                href={`#${item.toLowerCase()}`}
+              <button
                 className={`cursor-pointer text-lg ${
                   active === item ? "text-red-500 font-semibold" : "text-black"
                 } hover:text-red-500`}
                 onClick={() => handleNavClick(item)}
               >
                 {item}
-              </a>
+              </button>
             </li>
           ))}
         </ul>
@@ -38,6 +51,7 @@ export default function Header() {
         Contact us
       </button>
 
+      
       <div className="md:hidden">
         <Hamburger
           isOpen={menuOpen}
@@ -52,20 +66,20 @@ export default function Header() {
         />
       </div>
 
+     
       {menuOpen && (
         <div className="absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
           <ul className="flex flex-col items-center space-y-4 py-4">
-            {["Home", "About", "Blog", "Testimonial"].map((item) => (
+            {Object.keys(navLinks).map((item) => (
               <li key={item}>
-                <a
-                  href={`#${item.toLowerCase()}`}
+                <button
                   className={`cursor-pointer text-lg ${
                     active === item ? "text-red-500 font-semibold" : "text-black"
                   } hover:text-red-500`}
                   onClick={() => handleNavClick(item)}
                 >
                   {item}
-                </a>
+                </button>
               </li>
             ))}
           </ul>

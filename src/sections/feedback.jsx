@@ -8,13 +8,13 @@ const testimonials = [
   { id: 1, name: "Cody Lambert", role: "Marketing Manager", image: "/face1.jpg", text: "Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse." },
   { id: 2, name: "Tony Martinez", role: "Marketing Manager", image: "/face2.jpg", text: "Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse." },
   { id: 3, name: "Sophia Armstrong", role: "Marketing Manager", image: "/face3.jpg", text: "Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse." },
-  { id: 4, name: "Michael Smith", role: "Marketing Manager", image: "/face4.jpg", text: "Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse." },
-  { id: 5, name: "Emma Watson", role: "Marketing Manager", image: "/face5.jpg", text: "Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse." }
+  { id: 4, name: "Michael Smith", role: "Marketing Manager", image: "/face8.jpg", text: "Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse." },
+  { id: 5, name: "Emma Watson", role: "Marketing Manager", image: "/face20.jpg", text: "Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse." }
 ];
 
 export default function Feedback() {
   return (
-    <div className="flex flex-col items-center justify-center py-10 bg-[#FFFFFF] w-full">
+    <div id="client-feedback" className="flex flex-col items-center justify-center py-10 bg-[#FFFFFF] w-full">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-800">
           What our customers have to say
@@ -36,7 +36,7 @@ export default function Feedback() {
             768: { slidesPerView: 2 },
             0: { slidesPerView: 1 }
           }}
-          className="w-full"
+          className="w-full bg-yellow-300"
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
@@ -51,8 +51,8 @@ export default function Feedback() {
           ))}
         </Swiper>
 
-        <div className="flex justify-center mt-6">
-          <div className="swiper-pagination !relative"></div>
+        <div  className="flex justify-center mt-6">
+          <div  className="swiper-pagination !relative"></div>
         </div>
       </div>
     </div>
