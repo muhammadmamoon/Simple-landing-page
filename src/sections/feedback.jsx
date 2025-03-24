@@ -36,7 +36,7 @@ export default function Feedback() {
             768: { slidesPerView: 2 },
             0: { slidesPerView: 1 }
           }}
-          className="w-full bg-yellow-300"
+          className="w-full"
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
